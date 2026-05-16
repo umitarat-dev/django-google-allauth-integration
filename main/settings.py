@@ -26,7 +26,11 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'umit8110.pythonanywhere.com',
+    '127.0.0.1',
+    'localhost'
+    ]
 
 
 # Application definition
@@ -135,7 +139,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
+# 1. URL tanımı (Tarayıcının CSS'leri hangi adreste arayacağı)
 STATIC_URL = 'static/'
+
+# 2. Canlıda collectstatic komutunun dosyaları yığacağı HEDEF klasör (NameError vermez)
+# os.path.join yerine modern pathlib yöntemi (import os gerektirmez)
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# 3. Eğer projenin ana kökünde uygulamalardan bağımsız ortak bir 'static' klasörün varsa (Opsiyonel)
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -154,7 +168,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
- 
+
 # # Provider specific settings, instractor'ın yaptığı şekil V.01;
 # SOCIALACCOUNT_PROVIDERS = {
 #     'google': {
@@ -168,7 +182,7 @@ AUTHENTICATION_BACKENDS = [
 #     }
 # }
 
-# for social accounts; social accounts'ın tüm fonksiyonları için bu kodun kullanılması gerekiyor. V.02   
+# for social accounts; social accounts'ın tüm fonksiyonları için bu kodun kullanılması gerekiyor. V.02
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
