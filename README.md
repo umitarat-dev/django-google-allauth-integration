@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Backend-Django%205.2-092E20?style=flat&logo=django&logoColor=white" />
-  <img src="https://img.shields.io/badge/Database-PostgreSQL-003B57?style=flat&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/API%20Docs-Swagger-85EA2D?style=flat&logo=swagger&logoColor=black" />
-  <img src="https://img.shields.io/badge/Auth-JWT-black?style=flat&logo=json-web-tokens&logoColor=white" />
+  <img src="https://img.shields.io/badge/Backend-Django%205.1-092E20?style=flat&logo=django&logoColor=white" />
+  <img src="https://img.shields.io/badge/Frontend-Bootstrap%205-7952B3?style=flat&logo=bootstrap&logoColor=white" />
+  <img src="https://img.shields.io/badge/Auth-Google%20OAuth2-4285F4?style=flat&logo=google&logoColor=white" />
+  <img src="https://img.shields.io/badge/UI%20Design-Glassmorphism-FF69B4?style=flat&logo=css3&logoColor=white" />
 </p>
 
 <h1 align="center">🔐 Django Google Allauth Integration</h1>
 
-<p align="center"><strong>A professional, production-ready REST API for modern inventory tracking and warehouse management systems 🚀</strong></p>
+<p align="center"><strong>A professional, production-ready implementation of Google OAuth2 social authentication featuring a sleek, responsive Glassmorphism user interface 🚀</strong></p>
 
 <div align="center">
   <h3>
@@ -23,134 +23,102 @@
 
 <p align="center">
   <a href="https://umit8110.pythonanywhere.com">
-    <img src="./assets/stock-management.gif" alt="Interactive Swagger Documentation" width="700"/>
+    <img src="./assets/google-auth.gif" alt="Interactive Swagger Documentation" width="700"/>
   </a>
 </p>
 
 ## 📚 Navigation
-- [🚀 Live API Documentation](#-live-api-documentation)
+- [🚀 Live Application](#-live-application)
 - [📦 Key Features](#-key-features)
 - [🛠️ Built With](#️-built-with)
 - [⚙️ Setup & Installation](#️-setup--installation)
-- [📊 Data Model (ERD)](#-data-model-erd)
+- [🔑 Google API Configuration](#-google-api-configuration)
 - [📬 Contact Information](#-contact-information)
 
+## 🚀 Live Application
+The web application is fully deployed and active on production. You can test both the social authentication workflow and the native credential system.
+* **Production URL:** [https://umit8110.pythonanywhere.com](https://umit8110.pythonanywhere.com)
+
+> **Pro Tip:** When logging in via Google, the application securely retrieves the user's social profile details and gracefully renders their avatar inside the dynamic navigation bar.
+
+## 📦 Key Features
+* **Google Social Authentication:** Secure, one-click login and registration engine powered by `django-allauth`.
+* **Hybrid Auth System:** Seamless fallback supporting traditional username/password registrations with real-time Django messages/notifications.
+* **Sleek Glassmorphism UI:** Fully customized frontend built with Bootstrap 5 and modern CSS blur filters (`backdrop-filter`) for a premium visual feel.
+* **Intelligent Responsive Navbar:** Custom mobile layout optimization where main site navigation links align to the left, while authentication/profile controls snap perfectly to the right side of the hamburger menu.
+* **Security Best Practices:** Environment-aware structure keeping confidential credentials (`SECRET_KEY`, Google Client IDs) heavily decoupled via `python-decouple`.
+* **Production-Ready Deployment:** Native alignment with PythonAnywhere deployment standards, including automated static file bundling via `collectstatic`.
 
 
-## About This Project
-
-This project allows users to easily register and log in via their Google account with Django. 
-Its main features are:
-
-- Fast and secure authentication with Google account.
-- Support registration and login with traditional username and password.
-- Social authentication management with Django Allauth.
-- User-friendly message notifications and stylish design with Bootstrap.
-
----
-
-Bu proje, Django ile kullanıcıların Google hesabı üzerinden kolayca kayıt ve giriş yapmasını sağlamaktadır. 
-Başlıca özellikleri şunlardır:
-
-- Google hesabı ile hızlı ve güvenli kimlik doğrulama.
-- Geleneksel kullanıcı adı ve şifre ile kayıt ve giriş desteği.
-- Django Allauth ile sosyal kimlik doğrulama yönetimi.
-- Kullanıcı dostu mesaj bildirimleri ve Bootstrap ile şık tasarım.
-
-<!-- OVERVIEW -->
-
-## Overview
-
-### Social Account Authentication
-<!-- ![screenshot](project_screenshot/Social_Account_Auth_App.gif) -->
-<img src="project_screenshot/Social_Account_Auth_App.gif" alt="Social Account Authentication" width="400"/>
-➡ The screen where users log in with their Google accounts and access the home page.
-
----
-
-
-## Built With
-
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
-This project was developed using the following tools and libraries:
-
-- [Django Templates](https://docs.djangoproject.com/en/5.1/topics/templates/): For creating dynamic web pages.
-- [Bootstrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/): To provide a responsive and modern user interface.
-- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/): To easily style forms.
-- [django-allauth](https://django-allauth.readthedocs.io/en/latest/index.html) - Social Account Authentication Management
+## 🛠️ Built With
+* **Framework:** [Django 5.1](https://www.djangoproject.com/) (Python 3.10+)
+* **Social Authentication:** [django-allauth](https://django-allauth.readthedocs.io/)
+* **Form Layouts:** [django-crispy-forms](https://django-crispy-forms.readthedocs.io/) & [crispy-bootstrap5](https://github.com/django-crispy-forms/crispy-bootstrap5)
+* **Frontend:** [Bootstrap 5](https://getbootstrap.com/) & Custom CSS3
 
 
 
-## How To Use
+## ⚙️ Setup & Installation
 
-<!-- This is an example, please update according to your application -->
+### Option 1: Local Development (macOS/Linux/Windows)
 
-To clone and run this application, you'll need [Git](https://github.com/Umit8098/Project_Django_Templates_Todo_App_FB_Authantication-1_CH-11)
-
-When installing the required packages in the requirements.txt file, review the package differences for windows/macOS/Linux environments. 
-
-Complete the installation by uncommenting the appropriate package.
-
----
-
-requirements.txt dosyasındaki gerekli paketlerin kurulumu esnasında windows/macOS/Linux ortamları için paket farklılıklarını inceleyin. 
-
-Uygun olan paketi yorumdan kurtararak kurulumu gerçekleştirin.
-
+#### 1. Clone the Repository & Initialize Environment
 ```bash
-# Clone this repository
-$ git clone https://github.com/Umit8098/Project_Django_Templates_Todo_App_FB_Authantication-1_CH-11.git
+git clone [https://github.com/umitarat-dev/django-google-allauth-integration.git](https://github.com/umitarat-dev/django-google-allauth-integration.git)
+cd django-google-allauth-integration
 
-# Install dependencies
-    $ python -m venv env
-    $ python3 -m venv env (for macOs/linux OS)
-    $ env/Scripts/activate (for win OS)
-    $ source env/bin/activate (for macOs/linux OS)
-    $ pip install -r requirements.txt
-    $ python manage.py migrate (for win OS)
-    $ python3 manage.py migrate (for macOs/linux OS)
-
-# Create and Edit .env
-# Add Your SECRET_KEY in .env file
-
-# Google API Ayarları
-
-For Google authentication, follow these steps:
-Google kimlik doğrulaması için şu adımları takip edin:
-
-1. [Google API Console](https://console.cloud.google.com/) Go to and create a new project.
-2. "OAuth Consent Screen" configure settings.
-3. Get `GOOGLE_CLIENT_ID` and `GOOGLE_SECRET` information from the "Credentials" tab.
-4. Add this information to your `.env` file.
-
-
-"""
-# example .env;
-
-SECRET_KEY =123456789abcdefg...
-
-GOOGLE_CLIENT_ID={YOUR_GOOGLE_CLIENT_ID}
-GOOGLE_SECRET={YOUR_GOOGLE_SECRET}
-
-"""
-
-# Run the app
-    $ python manage.py runserver
+# Setup Virtual Environment
+python3 -m venv env
+source env/bin/activate  # Windows: env\Scripts\activate
 ```
 
-## Key Features
+#### 2. Install Dependencies
 
-- **Authentication with Google Account**: Users can quickly log in using their Google account.
-- **Traditional Authentication**: Support user registration and login with email and password.
-- **Profile Management**: Registered users can edit account information.
-- **User Notifications**: Feedback is provided about the actions taken.
+```bash
+pip install -r requirements.txt
+```
 
----
+#### 3. Environment Configuration
+Create a `.env` file in the root directory of the project:
 
-- **Google Hesabı ile Kimlik Doğrulama**: Kullanıcılar Google hesaplarını kullanarak hızlı giriş yapabilir.
-- **Geleneksel Kimlik Doğrulama**: E-posta ve şifre ile kullanıcı kaydı ve giriş desteği.
-- **Profil Yönetimi**: Kayıtlı kullanıcılar hesap bilgilerini düzenleyebilir.
-- **Kullanıcı Bildirimleri**: Yapılan işlemler hakkında geri bildirim sağlanır.
+```bash
+SECRET_KEY=your_secure_django_secret_key
+DEBUG=True
+ALLOWED_HOSTS=127.0.0.1,localhost
+GOOGLE_CLIENT_ID=your_google_client_id_here
+GOOGLE_SECRET=your_google_client_secret_here
+```
+
+#### 4. Run Migrations & Start Server
+Create a `.env` file in the root directory of the project:
+
+```bash
+python manage.py migrate
+python manage.py runserver
+```
+
+Navigate to `http://127.0.0.1:8000/` to explore the application locally.
+
+### Option 2: Production (PythonAnywhere Deployment)
+- The project settings are decoupled and pre-configured for live tracking. Ensure `STATIC_ROOT = BASE_DIR / 'staticfiles'` is active and mapped properly inside the PythonAnywhere Web tab.
+
+
+## 🔑 Google API Configuration
+- To make Google Social Login functional in your own environment, follow these steps:
+
+1. Go to the Google Cloud Console and create a new project.
+
+2. Configure your OAuth Consent Screen settings.
+
+3. Navigate to the Credentials tab, click Create Credentials, and select OAuth client ID.
+
+4. Set the application type to Web Application and add your redirect URIs:
+  - Local URI: `http://127.0.0.1:8000/accounts/google/login/callback/`
+
+  - Production URI: `https://umit8110.pythonanywhere.com/accounts/google/login/callback/`
+
+5. Copy your generated `Client ID` and `Client Secret` into your local or production `.env` file.
+
 
 
 ## 📬 Contact Information
