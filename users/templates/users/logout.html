@@ -1,0 +1,13 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+
+<div class="container text-center mt-5">
+    <div class="card shadow-sm p-5 mx-auto" style="max-width: 500px;">
+        <h3 class="text-secondary mb-4">You have been logged out.</h3>
+        <p class="text-muted">Güvenli bir şekilde çıkış yaptınız. Tekrar görüşmek üzere!</p>
+        <a href="{% url 'user_login' %}" class="btn btn-warning fw-bold text-danger mt-2">Log in again</a>
+    </div>
+</div>
+
+{% endblock content %}

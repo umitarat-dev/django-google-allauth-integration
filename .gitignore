@@ -1,0 +1,52 @@
+# ==========================================
+# Ümit Arat - Django Google Allauth Project
+# .gitignore (Tailored for macOS & Django)
+# ==========================================
+
+### macOS Özel Sürücü Dosyaları ###
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon_
+
+### Python Derleme ve Önbellek Dosyaları ###
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+### Sanal Ortamlar (Virtual Environments) ###
+# Kritik: Kodların sunucuya yüklenmesini engeller
+env/
+venv/
+.env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+### Django Yerel Veritabanı ve Log Dosyaları ###
+# Kritik: Yereldeki test verilerin ve gizli logların gitmesin
+db.sqlite3
+db.sqlite3-journal
+*.log
+
+### Statik ve Medya Dosyaları ###
+# collectstatic ile üretilen veya yüklenen dosyalar canlıda yönetilir
+staticfiles/
+/media/
+
+### IDE ve Editör Ayarları (VS Code & PyCharm) ###
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+### Kimlik Doğrulama ve Gizli Anahtarlar ###
+# En kritik satır! Google Secret anahtarlarının sızmasını engeller
+.env
+local_settings.py

@@ -1,0 +1,56 @@
+/* style.css */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* Modern, derinlik hissi veren soyut gradyan arka plan */
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #f8fafc;
+}
+
+/* Glassmorphism (Cam Efekti) Kart Yapısı */
+.custom-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Tipografi Düzenlemeleri */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: none !important; /* Eski çiğ arka plan dolgularını ezdik */
+    color: #f8fafc !important;
+}
+
+.custom-border-radius {
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+/* Form Alanlarının Cam Temasına Uyarlanması */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border-color: #6366f1 !important;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25) !important;
+}
+
+.control-label, .form-label, .text-muted {
+    color: #cbd5e1 !important;
+}
