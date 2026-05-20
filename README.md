@@ -1,6 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Backend-Django%205.1-092E20?style=flat&logo=django&logoColor=white" />
-  <img src="https://img.shields.io/badge/Frontend-Bootstrap%205-7952B3?style=flat&logo=bootstrap&logoColor=white" />
+  <img src="https://img.shields.io/badge/Engine-Django%20Templates-092E20?style=flat&logo=django&logoColor=white"/>
+        <img src="https://img.shields.io/badge/UI-Bootstrap%205.3.3-7952B3?style=flat&logo=bootstrap&logoColor=white"/>
   <img src="https://img.shields.io/badge/Auth-Google%20OAuth2-4285F4?style=flat&logo=google&logoColor=white" />
   <img src="https://img.shields.io/badge/UI%20Design-Glassmorphism-FF69B4?style=flat&logo=css3&logoColor=white" />
 </p>
